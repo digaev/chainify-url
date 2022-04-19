@@ -1,8 +1,9 @@
 {
   "name": "chainify-url",
   "version": "1.0.0",
-  "description": "Object oriented URL builder",
+  "description": "Object Oriented URL Builder",
   "keywords": [
+    "builder",
     "http",
     "object",
     "url"
