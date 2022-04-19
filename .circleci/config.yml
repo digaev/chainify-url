@@ -1,0 +1,38 @@
+version: 2.1
+
+orbs:
+  coveralls: coveralls/coveralls@1.0.6
+
+workflows:
+  test:
+    jobs:
+      - test
+
+jobs:
+  test:
+    docker:
+      - image: 'circleci/node'
+    steps:
+      - checkout
+      - run:
+          name: Install NVM
+          command: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+      - run:
+          name: Node.js 12
+          command: source ~/.nvm/nvm.sh && nvm install --lts=erbium && npm i -g npm && npm i && npm run test
+      - clean
+      - run:
+          name: Node.js 14
+          command: source ~/.nvm/nvm.sh && nvm install --lts=fermium && npm i -g npm && npm i && npm run test
+      - clean
+      - run:
+          name: Node.js 16
+          command: source ~/.nvm/nvm.sh && nvm install --lts=gallium && npm i -g npm && npm i && npm run coveralls
+      - coveralls/upload
+
+commands:
+  clean:
+    steps:
+      - run:
+          name: Remove node_modules
+          command: rm -rf node_modules

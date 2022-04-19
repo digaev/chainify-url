@@ -1,0 +1,23 @@
+{
+  "name": "chainify-url-sample-project",
+  "version": "1.0.0",
+  "description": "Chainify URL Sample Project",
+  "license": "ISC",
+  "author": "Nikolay Digaev <ffs.cmp@gmail.com>",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "rm -rf ./build && babel -s -D -d ./build ./src",
+    "start": "node ./build/index.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "axios": "^0.26.1",
+    "chainify-url": "file:..",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
