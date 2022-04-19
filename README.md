@@ -1,5 +1,8 @@
 # Chainify URL
 
+[![CircleCI](https://circleci.com/gh/digaev/chainify-url/tree/master.svg?style=svg)](https://circleci.com/gh/digaev/chainify-url/tree/master)
+[![Coverage Status](https://coveralls.io/repos/github/digaev/chainify-url/badge.svg?branch=master)](https://coveralls.io/github/digaev/chainify-url?branch=master)
+
 Object oriented URL builder.
 
 ## Installation
