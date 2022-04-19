@@ -2,6 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/digaev/chainify-url/tree/master.svg?style=svg)](https://circleci.com/gh/digaev/chainify-url/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/digaev/chainify-url/badge.svg?branch=master)](https://coveralls.io/github/digaev/chainify-url?branch=master)
+[![npm](https://img.shields.io/npm/v/chainify-url)](https://www.npmjs.com/package/chainify-url)
 
 Object oriented URL builder.
 
